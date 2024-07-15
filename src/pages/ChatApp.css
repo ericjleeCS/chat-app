@@ -1,0 +1,51 @@
+
+.chat-application {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-list {
+    background: #ddd;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-window {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.chat-message {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.input-field {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.input-field input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
