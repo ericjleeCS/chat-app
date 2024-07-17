@@ -1,10 +1,24 @@
-import ChatPage from "./pages/ChatPage";
+import React, { useState } from 'react';
+import ChatPage from './pages/ChatPage';
 
+const App = () => {
+  const [chats, setChats] = useState([
 
-function App() {
+  ]);
+
+  const handleSelectChat = (chatId) => {
+    console.log(`Selected chat ID: ${chatId}`);
+    // Add logic to handle chat selection
+  };
+
   return (
-    <ChatPage/>
+    <div>
+      <h1>Chat Application</h1>
+      <ChatPage/>
+   
+      
+    </div>
   );
-}
+};
 
 export default App;

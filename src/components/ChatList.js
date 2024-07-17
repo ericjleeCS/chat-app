@@ -1,26 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-
-const ChatList = ({chats, onSelectChat}) =>{
-    return(
-        <div className = "chat-list">
-            {chats.map((chat) => (
-                <div
-                key = {chat.id}
-                className = "chat-item"
-                onClick={() => onSelectChat(chat.id)}
-                >
-                    <div className = "chat-item-details">
-                        <div className = "chat-item-title">
-                            <div className = "last-message">
-                                {chat.lastMessage}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            ))}
+const ChatList = ({ chats, onSelectChat }) => {
+  return (
+    <div className="chat-list">
+      {chats.map((chat) => (
+        <div
+          key={chat.id}
+          className="chat-item"
+          onClick={() => onSelectChat(chat.id)}
+        >
+          <div className="chat-item-details">
+            <div className="chat-item-title">{chat.title}</div>
+            <div className="last-message">{chat.lastMessage}</div>
+          </div>
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default ChatList
+ChatList.propTypes = {
+  chats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      lastMessage: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onSelectChat: PropTypes.func.isRequired,
+};
+
+export default ChatList;

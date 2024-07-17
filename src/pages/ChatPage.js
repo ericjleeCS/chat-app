@@ -35,7 +35,7 @@ const ChatPage = () => {
     return(
         <div className = "chat-application">
             <div className = "user-list">
-                <ChatList />
+            <ChatList chats={msg}  />
             </div>
             <div className='chat-window'>
                 {msg.map((message,index) =>(
