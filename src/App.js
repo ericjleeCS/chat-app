@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
+import "./App.css"
+import { auth } from "./components/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import NavBar from "./components/NavBar";
 import ChatPage from './pages/ChatPage';
-
+import Welcome from './components/Welcome';
 const App = () => {
-  const [chats, setChats] = useState([
-
-  ]);
-
-  const handleSelectChat = (chatId) => {
-    console.log(`Selected chat ID: ${chatId}`);
-    // Add logic to handle chat selection
-  };
+  const [user] = useAuthState(auth);
 
   return (
-    <div>
-      <h1>Chat Application</h1>
-      <ChatPage/>
-   
-      
-    </div>
+   <div className = "App">
+    <NavBar />
+    {!user ? <Welcome /> : <ChatPage />}
+   </div>
   );
 };
 

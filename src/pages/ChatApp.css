@@ -49,3 +49,11 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.header {
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   font-size: 2.0em;
+   font-weight: bold;
+}

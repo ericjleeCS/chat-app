@@ -20,15 +20,5 @@ const ChatList = ({ chats, onSelectChat }) => {
   );
 };
 
-ChatList.propTypes = {
-  chats: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      lastMessage: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onSelectChat: PropTypes.func.isRequired,
-};
 
 export default ChatList;
