@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import "./App.css"
-import { auth } from "./components/firebase";
+import { auth } from "./services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import NavBar from "./components/NavBar";
 import ChatPage from './pages/ChatPage';
@@ -12,6 +11,7 @@ const App = () => {
    <div className = "App">
     <NavBar />
     {!user ? <Welcome /> : <ChatPage />}
+    
    </div>
   );
 };

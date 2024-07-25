@@ -21,8 +21,8 @@ input {
 .App {
   width: 100%;
   min-height: 100vh;
-  background-color: #1c2c4c;
-  color: #4c768d;
+  background-color: white;
+  color: white;
   padding-top: 60px;
 }
 
@@ -41,9 +41,19 @@ input {
   width: 100%;
   z-index: 1;
 }
+
+.app-title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+.sign-in-container {
+  margin-left: auto;
+}
 .sign-in {
+  margin-top: 50px;
   border: none;
-  background-color: transparent;
+  background-color: none;
 }
 .sign-in > img {
   height: 30px;
@@ -63,7 +73,7 @@ input {
   padding: 30px;
   text-align: center;
   margin-top: 40px;
-  color: white;
+  color: black;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
